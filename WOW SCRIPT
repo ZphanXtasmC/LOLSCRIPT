@@ -34,5 +34,6 @@ function add_suffix(inte)
 end
 
 -- Server Hop and Milkup script
-https://raw.githubusercontent.com/ZphanXtasmC/Phantasm/main/PhantasmChanger%20Script
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ZphanXtasmC/Phantasm/main/PhantasmChanger%20Script", true))()
+
 
