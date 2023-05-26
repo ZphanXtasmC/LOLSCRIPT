@@ -20,14 +20,14 @@ function add_suffix(inte)
 
     if Lucky_coins >= 1000000000000 then  -- if Lucky_coins are greater than or equal to 1 trillion
         Lucky_coins = string.format("%.1ft", Lucky_coins / 1000000000000)  -- display Lucky_coins in trillions with one decimal point
-    elseif gems >= 1000000000 then  -- if gems are greater than or equal to 1 billion
+    elseif gems >= 1000000000 then  -- if LuckyCoins are greater than or equal to 1 billion
         Lucky_coins = string.format("%.1fb", Lucky_coins / 1000000000)  -- display Lucky_coins in billions with one decimal point
-    elseif gems >= 1000000 then  -- if gems are greater than or equal to 1 million
+    elseif gems >= 1000000 then  -- if LuckyCoins are greater than or equal to 1 million
         Lucky_coins = string.format("%.1fm", Lucky_coins / 1000000)  -- display Lucky_coins in millions with one decimal point
-    elseif gems >= 1000 then  -- if gems are greater than or equal to 1 thousand
+    elseif gems >= 1000 then  -- if LuckyCoins are greater than or equal to 1 thousand
         Lucky_coins = string.format("%.1fk", Lucky_coins / 1000)  -- display Lucky_coins in thousands with one decimal point
-    else  -- if gems are less than 1 thousand
-        Lucky_coins = tostring(gems)  -- display gems as is
+    else  -- if LuckyCoins are less than 1 thousand
+        Lucky_coins = tostring(gems)  -- display LuckyCoins as is
     end
 
     return Lucky_coins
