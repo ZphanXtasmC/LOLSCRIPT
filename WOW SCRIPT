@@ -4,8 +4,8 @@ wait(5)
 WEBHOOK = "https://discordapp.com/api/webhooks/1005817350869745684/wSrvWJbkZuDoNtVj3QWC0oeE__r8u5thhdsXZ30s5uVogEUyrsRBdK8j79bBVasTpmc4" -- Paste your webhook here
 HttpService = game:GetService("HttpService")
 local TimeElapsed = 0
-local GemsEarned = 0
-local TotalGemsEarned = 0
+local LuckyCoinsEarned = 0
+local TotalLuckyCoinsEarned = 0
 local timer = coroutine.create(function()
     while 1 do
         TimeElapsed = TimeElapsed + 1
@@ -13,24 +13,24 @@ local timer = coroutine.create(function()
     end
 end)
 coroutine.resume(timer)
-AREATOCHECK = "Mystic Mine"
+AREATOCHECK = "Lucky Block World"
 function add_suffix(inte)
-    local gems = inte
-    local gems_formatted
+    local LuckyCoins = inte
+    local Lucky_coins
 
-    if gems >= 1000000000000 then  -- if gems are greater than or equal to 1 trillion
-        gems_formatted = string.format("%.1ft", gems / 1000000000000)  -- display gems in trillions with one decimal point
+    if Lucky_coins >= 1000000000000 then  -- if Lucky_coins are greater than or equal to 1 trillion
+        Lucky_coins = string.format("%.1ft", Lucky_coins / 1000000000000)  -- display Lucky_coins in trillions with one decimal point
     elseif gems >= 1000000000 then  -- if gems are greater than or equal to 1 billion
-        gems_formatted = string.format("%.1fb", gems / 1000000000)  -- display gems in billions with one decimal point
+        Lucky_coins = string.format("%.1fb", Lucky_coins / 1000000000)  -- display Lucky_coins in billions with one decimal point
     elseif gems >= 1000000 then  -- if gems are greater than or equal to 1 million
-        gems_formatted = string.format("%.1fm", gems / 1000000)  -- display gems in millions with one decimal point
+        Lucky_coins = string.format("%.1fm", Lucky_coins / 1000000)  -- display Lucky_coins in millions with one decimal point
     elseif gems >= 1000 then  -- if gems are greater than or equal to 1 thousand
-        gems_formatted = string.format("%.1fk", gems / 1000)  -- display gems in thousands with one decimal point
+        Lucky_coins = string.format("%.1fk", Lucky_coins / 1000)  -- display Lucky_coins in thousands with one decimal point
     else  -- if gems are less than 1 thousand
-        gems_formatted = tostring(gems)  -- display gems as is
+        Lucky_coins = tostring(gems)  -- display gems as is
     end
 
-    return gems_formatted
+    return Lucky_coins
 end
 
 -- Server Hop and Milkup script
